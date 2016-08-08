@@ -53,6 +53,10 @@
 /* End Custom Bootstrap Navbar */
 
 /* Body */
+body {
+    margin: 0;
+}
+
 h1 {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 24px;
@@ -78,15 +82,11 @@ p {
 
 /* Footer */
 
-.footer {
-    position: absolute;
+footer {
     bottom: 0;
     width: 100%;
-    height: 60px;
     background-color: #f5f5f5;
 }
 
-.footer .container {
-	padding: 15px 15px;
-}
+
 /* End Footer */
