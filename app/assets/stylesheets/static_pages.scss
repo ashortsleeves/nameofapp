@@ -52,6 +52,16 @@
 
 /* End Custom Bootstrap Navbar */
 
+/* Carousel */
+.carousel-indicators li {
+    background-color: red;
+}
+
+.carousel-indicators .active {
+    background-color: red;
+}
+/* End Carousel */
+
 /* Body */
 body {
     margin: 0;
