@@ -50,15 +50,40 @@
     color: #777;
 }
 
+
+.navbar-header button {
+    border-color: #fff;
+}
+
 /* End Custom Bootstrap Navbar */
 
+/* Jumbotron */
+.jumbotron {
+    margin-bottom: 0;
+}
+
+/* End Jumbotron */
+
+
 /* Carousel */
+
+.carousel-inner {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .carousel-indicators li {
-    background-color: red;
+    background-color: rgba(94, 140, 204, 1);
 }
 
 .carousel-indicators .active {
-    background-color: red;
+    background-color: rgba(94, 140, 204, 1);
+}
+
+.carousel-caption {
+    color:black;
+    left: auto;
+    top: 0;
 }
 /* End Carousel */
 
@@ -88,6 +113,9 @@ p {
 #maintext {
 	padding-top: 100px;
 }
+
+
+
 /* End Body */
 
 /* Footer */
