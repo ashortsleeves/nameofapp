@@ -4,10 +4,6 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    # Conditional search. Depending on the environment where the search is applied at (production vs development) we use a diferent SQL matching method
-    # the LIKE sql method is case sensitive in the development environment
-    # the ILIKE sql method is not case sensitive and it is going to be used for the production environment
-    # If there is no search then all the products are going to be displayed.
     if Rails.env.development? && params[:q]
       search_term = params[:q]
       @products = Product.where("name LIKE ?", "%#{search_term}%")
@@ -15,9 +11,6 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       @products = Product.where("name ILIKE ?", "%#{search_term}%")
     else
-      # Here we create an instance variable @products
-      # and we asign to it all the contents of the array Product which is in the model
-      # in order to be able to reference it in the dynamic html views
       @products = Product.all
     end
   end
