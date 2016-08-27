@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bike Fall River</title>
+    <title>Backcountry Cyclist</title>
     <%= csrf_meta_tags %>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -10,13 +10,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
     <nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header"><a class="navbar-brand" href="#">Bike Fall River</a>
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="#">Backcountry Cyclist</a>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
           </button>
       </div>
@@ -30,7 +34,15 @@
             </li>
             <li><%= link_to "Contact", static_pages_contact_path %>
             </li>
+            <li>
+            <%= form_tag("/products", method: "get") do %>
+              <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Search") %>
+            <% end %>
+            </li>
           </ul>
+
         </div>
       </div>
     </nav>

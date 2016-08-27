@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 
 
 
@@ -19,6 +23,7 @@
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
     color: rgba(255, 255, 255, 1);
     background-color: rgba(104, 127, 158, 1);
+    font-family: 'Lato', sans-serif;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
@@ -48,6 +53,7 @@
 
 .navbar-default .navbar-brand {
     color: #777;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -60,8 +66,34 @@
 /* Jumbotron */
 .jumbotron {
     margin-bottom: 0;
+    // background-color:none;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.2)
+    ), 
+    url(backcountry.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
+.jumbotron h1 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.jumbotron p {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+.jumbotron .btn-primary {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(0, 0, 0, 0.9);
+    text-transform: uppercase;
+    font-size: 12px;
+}
 /* End Jumbotron */
 
 
