@@ -11,10 +11,6 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       @products = Product.where("name ILIKE ?", "%#{search_term}%")
     else
-<<<<<<< HEAD
-=======
-# return our filtered list here
->>>>>>> 77039fee6cbc2d160eee1aafb90cf1362eba5977
       @products = Product.all
     end
   end
