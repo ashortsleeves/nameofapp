@@ -25,6 +25,8 @@ Rails.application.configure do
 
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
+  
+  #changed to include background image
   #config.assets.compile = false
   config.serve_static_assets = true
   config.assets.compile = true
