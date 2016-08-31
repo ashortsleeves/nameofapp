@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+//currently optimized to screens of at least 257px in width. 
+
 h1 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -17,12 +19,12 @@ h1 {
 }
 #custom-bootstrap-menu.navbar-default {
     font-size: #ffffffpx;
-    background-color: rgba(104, 127, 158, 1);
+    background-color: #292929;
     border-bottom-width: 0px;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
     color: rgba(255, 255, 255, 1);
-    background-color: rgba(104, 127, 158, 1);
+    background-color: #292929;
     font-family: 'Lato', sans-serif;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
@@ -34,21 +36,21 @@ h1 {
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
     color: rgba(255, 255, 255, 1);
-    background-color: rgba(94, 140, 204, 1);
+    background-color: #000000;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
-    border-color: #ffffff;
+    border-style: none;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #5e8ccc;
+     background-color: #292929;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #ffffff;
+    background-color: #8f8f8f;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .navbar-default .navbar-brand {
@@ -61,6 +63,70 @@ h1 {
     border-color: #fff;
 }
 
+.search {
+    display: inline-block;
+    border:solid #8f8f8f 2px;
+    border-radius: 5px;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    // font-size: 15px;
+}
+
+.search-control {
+    padding-left: 10px;
+}
+
+.search input {
+    background-color: #292929;
+    border: none;
+    color: #fff;
+}
+
+input[type=submit] {
+    background-color: #8f8f8f;
+    border-radius: 1px;
+
+}
+
+@media (min-width: 768px) {
+    #nav-bs {
+        display: inline-block!important;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-header {
+        display:inline-block;
+        // width: 60%;
+    }
+    .search {
+        display: block;
+        float: right;
+    }
+
+    #nav-bs {
+    width: 100%;
+    }
+
+}
+
+@media (max-width: 474px) {
+    .navbar-header {
+        width: 100%;
+        margin-left: 0px;
+    }    
+
+}
+
+@media (max-width: 296px) {
+    .navbar-brand {
+    padding: 15px 10px;
+    font-size: 15px;
+    }
+}
 /* End Custom Bootstrap Navbar */
 
 /* Jumbotron */
@@ -94,6 +160,18 @@ h1 {
     text-transform: uppercase;
     font-size: 12px;
 }
+
+@media (max-width: 350px) {
+  .jumbotron {
+    padding-top: 10px;
+    background-size: 500px;
+    background-position: left;
+  }
+  .jumbotron p {
+    font-size: 17px;
+  } 
+
+}
 /* End Jumbotron */
 
 
@@ -105,11 +183,11 @@ h1 {
     margin-right: auto;
 }
 .carousel-indicators li {
-    background-color: rgba(94, 140, 204, 1);
+    background-color: #000000;
 }
 
 .carousel-indicators .active {
-    background-color: rgba(94, 140, 204, 1);
+    background-color: #000000;
 }
 
 .carousel-caption {
