@@ -1,4 +1,4 @@
-cdclass ProductsController < ApplicationController
+class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -18,41 +18,6 @@ def index
     @products = Product.all
   end
 end
-
-
-
-# def index
-#   if params[:q]
-#     search_term = params[:q]
-#     @products = Product.where("name = ?", search_term)
-#     # return our filtered list here
-#   else
-#     @products = Product.all
-#   end
-# end
-
-#Previous Attempt 1
-# def index
-#   if params[:q]
-#     search_term = params[:q]
-#     @products = Product.where("name ilike ?", "%#{search_term}%")
-#   else
-#     @products = Product.all
-#   end
-# end
-
-# Previous Attempt 2
-  # def index
-  #   if Rails.env.development? && params[:q]
-  #     search_term = params[:q]
-  #     @products = Product.where("name LIKE ?", "%#{search_term}%")
-  #   elsif Rails.env.production? && params[:q]
-  #     search_term = params[:q]
-  #     @products = Product.where("name ilike ?", "%#{search_term}%")
-  #   else
-  #     @products = Product.all
-  #   end
-  # end
 
   # GET /products/1
   # GET /products/1.json
