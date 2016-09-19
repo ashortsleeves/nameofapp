@@ -1,23 +1,23 @@
-class ProductsController < ApplicationController
+cdclass ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
   # GET /products.json
 
-def index
-  if params[:q]
-    search_term = params[:q]
-    logger.debug "User is searching for #{search_term}"
-    if (Rails.env == "production")
-      @products = Product.where("name ilike ?", "%#{search_term}%")
-    else
-      @products = Product.where("name LIKE ?", "%#{search_term}%")
-    end
-  # return our filtered list here
-  else
-    @products = Product.all
-  end
-end
+# def index
+#   if params[:q]
+#     search_term = params[:q]
+#     logger.debug "User is searching for #{search_term}"
+#     if (Rails.env == "production")
+#       @products = Product.where("name ilike ?", "%#{search_term}%")
+#     else
+#       @products = Product.where("name LIKE ?", "%#{search_term}%")
+#     end
+#   # return our filtered list here
+#   else
+#     @products = Product.all
+#   end
+# end
 
 
 
