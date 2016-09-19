@@ -228,6 +228,13 @@ p {
 	line-height: 20px;
 }
 
+.alert {
+    position:fixed;
+    z-index: 99999999999;
+    color:red;
+    font-weight: 800;
+}
+
 #maintext {
 	padding-top: 100px;
 }
