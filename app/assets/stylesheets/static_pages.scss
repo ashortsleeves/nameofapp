@@ -89,6 +89,12 @@ input[type=submit] {
     border-radius: 1px;
 
 }
+@media (min-width: 860px) {
+    nav .container {
+        width: 850px;
+    }
+
+}
 
 @media (min-width: 768px) {
     #nav-bs {
@@ -110,6 +116,7 @@ input[type=submit] {
     #nav-bs {
     width: 100%;
     }
+
 
 }
 
