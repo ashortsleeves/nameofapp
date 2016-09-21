@@ -1,19 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="container" id="productshow">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <div class="row" id="productfull">
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
+    <div class="col-md-4" id="imago">
+  <%= image_tag(@product.image_url, alt: "Bike Image", class: "img-responsive") %>
+    </div>
+    <div class="col-md-8">
+        <h3><%= @product.name %></h3>
+        <p><%= @product.description %></p>
+        <p>Color: <%= @product.color %></p>
+    </div>
+  </div><!-- /row -->
 <%= link_to 'Back', products_path %>
+</div><!-- /container -->
