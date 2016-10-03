@@ -3,16 +3,21 @@
 
 
   <div class="row" id="productfull">
-
-    <div class="col-md-4" id="imago">
-  <%= image_tag(@product.image_url, alt: "Bike Image", class: "img-responsive") %>
-    </div>
     <div class="col-md-8">
-        <h3><%= @product.name %></h3>
-        <%= @product.highest_rating_comment %>
-        <p><%= @product.description %></p>
-        <p>Color: <%= @product.color %></p>
+      <h3><%= @product.name %></h3>
+      <p><%= @product.description %></p>
+      <p>Color: <%= @product.color %></p>
+       <% @product.highest_rating_comment %>
+      
+      <p><%= link_to products_path  do %>
+        <i class="glyphicon glyphicon-arrow-left"></i>
+      <% end %>Back</p>
+    </div>
+    <div class="col-md-4" id="imago">
+      <%= image_tag(@product.image_url, alt: "Bike Image", class: "img-responsive") %>
     </div>
   </div><!-- /row -->
-<%= link_to 'Back', products_path %>
+  <div class="row">
+
+  </div>
 </div><!-- /container -->
