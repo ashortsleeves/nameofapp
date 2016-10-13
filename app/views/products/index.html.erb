@@ -9,8 +9,14 @@
 </div>
 
 <br>
+<div class="container">
+  <div class="row">
+    
+    <p><%= link_to 'New Product', new_product_path %></p>
+    <%= params[:example_key].to_i * 10 %>
+  </div>
 
-<%= link_to 'New Product', new_product_path %>
 
-<%= params[:example_key].to_i * 10 %>
+
+</div>
 
