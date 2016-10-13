@@ -12,8 +12,10 @@
 <div class="container">
   <div class="row">
     
-    <p><%= link_to 'New Product', new_product_path %></p>
-    <%= params[:example_key].to_i * 10 %>
+     <% if signed_in? && current_user.admin? %>
+        <%= link_to 'New Product', new_product_path, :class => "btn btn-xs btn-success" %>
+        <%= params[:example_key].to_i * 10 %>
+      <% end %>
   </div>
 
 
