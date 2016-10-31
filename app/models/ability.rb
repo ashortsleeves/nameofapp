@@ -11,7 +11,7 @@ class Ability
       can :read, :all
       can :create, Comment
       cannot [:update, :destroy], [Product, User, Comment]
-      cannot [:index, :show, :create], User
+      cannot [:index, :create], User
       cannot :create, Product
     end
   end

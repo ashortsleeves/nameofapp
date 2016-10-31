@@ -55,7 +55,6 @@ group :production do
 end
 
 gem 'devise'
-
 gem 'cancancan', '~> 1.10'
-
 gem 'will_paginate', '~> 3.1.1'
+gem 'rails-controller-testing'
