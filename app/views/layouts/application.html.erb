@@ -28,7 +28,7 @@
         <%= form_tag(products_path, method: "get", role:"search") do %>
           
           <%= text_field_tag(:q, nil, class: "search-control", placeholder: "Search Bikes...") %>
-          <%= image_submit_tag("search_icon.png", class: "img_responsive nav-search-icon", size: "5")%>
+          <%= image_submit_tag("search_icon.png", class: "img_responsive nav-search-icon")%>
         <% end %>
       </div>
       <div id="nav-bs" class="collapse navbar-collapse navbar-menubuilder">

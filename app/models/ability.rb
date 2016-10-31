@@ -9,6 +9,7 @@ class Ability
 
     else
       can :read, :all
+      can :create, Comment
       cannot [:update, :destroy], [Product, User, Comment]
       cannot [:index, :show, :create], User
       cannot :create, Product
