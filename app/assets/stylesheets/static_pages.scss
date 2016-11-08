@@ -141,8 +141,20 @@ input[type=submit] {
 }
 /* End Custom Bootstrap Navbar */
 
+/* Landing-Page Container */
+#landing-page {
+    height: 100%;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    
+}
+
+
+/* End Landing-Page Container */
 /* Jumbotron */
 .jumbotron {
+
     margin-bottom: 0;
     // background-color:none;
     background: 
@@ -150,10 +162,13 @@ input[type=submit] {
       rgba(0, 0, 0, 0.2), 
       rgba(0, 0, 0, 0.2)
     ), 
-    url(backcountry.jpg);
+    url(backcountry5.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: left;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 0!important;
 }
 
 .jumbotron h1 {
@@ -173,9 +188,25 @@ input[type=submit] {
     font-size: 12px;
 }
 
+@media (max-width: 1110px) {
+    .jumbotron {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.2)
+    ), 
+    url(backcountry3.jpg);
+    }
+}
+
 @media (max-width: 350px) {
   .jumbotron {
-    padding-top: 10px;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.2)
+    ), 
+    url(backcountry4.jpg);
     background-size: 500px;
     background-position: left;
   }
@@ -184,11 +215,38 @@ input[type=submit] {
   } 
 
 }
+
+
+
+@media screen and (min-width: 768px) {
+    .jumbotron h1 {
+        font-size: 60px;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .jumbotron h1 {
+        font-size: 63px;
+    }
+}
+
+
+@media screen and (min-height: 900px) {
+    .jumbotron {
+        height: 380px;
+    }
+}
+
+
 /* End Jumbotron */
 
 
 /* Carousel */
-
+#carousel-example-generic {
+    padding-top: 80px;
+    height: 500px;
+    width: 100%;
+}
 .carousel-inner {
     width: 70%;
     margin-left: auto;
@@ -203,9 +261,73 @@ input[type=submit] {
 }
 
 .carousel-caption {
-    color:black;
+    color: black;
     left: auto;
     top: 0;
+    width: 280px;
+    text-align: left;
+    
+}
+.carousel-control {
+    width: 5%;
+    opacity: 0.15;
+}
+
+.carousel-control:focus, .carousel-control:hover {
+
+    background: none;
+
+}
+
+.glyphicon, .glyphicon-chevron-right:hover {
+    color: #292929;
+}
+
+
+
+@media screen and (min-width: 0px) {
+    #carousel-example-generic {
+        padding-top: 0px;
+    }
+    
+    .carousel-caption {
+        right: 0;
+        width: 100%;
+    }    
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-caption {
+        right: 0;
+        width: 180px;
+    }    
+}
+
+@media screen and (min-width: 1090px) {
+    .carousel-caption {
+        right: 20%;
+    }    
+}
+
+@media (min-width: 768px) {
+    #carousel-caption-mobile {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    #carousel-caption-fullscreen {
+        display: none;
+    }
+    
+    .carousel-inner>.item>a>img, .carousel-inner>.item>img {
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .carousel-inner>.item>a>img, .carousel-inner>.item>img {
+      padding-top: 160px;
+    }
 }
 /* End Carousel */
 
