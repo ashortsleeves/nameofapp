@@ -4,7 +4,8 @@
     <div class="container">
       <h1>Backcountry Cyclist</h1>
       <p>Start Your Adventure Today</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      <p><%= link_to "Shop Bikes", products_path,
+          :class => "btn btn-primary btn-lg" %></p>
     </div>
   </div>
   
@@ -18,14 +19,26 @@
     <div class="carousel-inner" role="listbox">
       <% @products.each do |product| %>
       <div class="item<%= " active" if product == @products.first %>">
-       <div class="carousel-caption" id="carousel-caption-mobile">
-          <h3><%= product.name %></h>
-          <p>$<%= product.price %></p>
-        </div>
-        <%= image_tag(product.image_url,  width: "300", alt: "Bike Image", class: "img-responsive") %>
-       <div class="carousel-caption" id="carousel-caption-fullscreen">
-          <h3><%= product.name %></h>
-          <p>$<%= product.price %></p>
+          <div class="col-sm-12" id="carousel-caption-mobile">
+            <h3><%= product.name %></h3>
+            <br>
+
+          </div>
+        <div class="container">
+
+          <div class="carousel-image">
+            <%= image_tag(product.image_url,  width: "300", alt: "Bike Image", class: "img-responsive") %>
+          </div>
+          <div id="carousel-caption-mobile-button">
+            <p><%= link_to 'Buy Now', product, :class => "btn btn-primary btn-lg center-block" %></p>
+          </div>
+            
+         <div class="carousel-caption" id="carousel-caption-fullscreen">
+            <h3><%= product.name %></h3>
+            <br>
+            <p><%= link_to 'Buy Now', product,
+          :class => "btn btn-primary btn-lg center-block" %></p>
+          </div>
         </div>
        </div>
       <% end %>
