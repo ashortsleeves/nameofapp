@@ -9,3 +9,121 @@
 #productshow {
   padding-top: 90px;
 }
+
+#titleo {
+    height: 70px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#titleo h3 {
+    font-size: 16px;
+}
+
+#imago {
+    height: 300px;
+}
+#imago .thumbnail {
+    border: none;
+}
+
+
+#ratingo {
+    text-align: center;
+    padding-top: 0;
+}
+
+#descripto {
+  
+    height: 150px;
+
+}
+.product-description {
+    float: left;
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+}
+
+#coloro .btn-primary {
+    width: 80%;
+    background-color: rgba(0, 102, 51, 0.6);
+    border-color: rgba(0, 0, 0, 0.9);
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+
+
+}
+
+#coloro .btn-primary:hover {
+    background-color: rgba(0, 102, 51, 0.9);
+    border-color: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 991px) {
+   #titleo h3 {
+    font-size: 14px;
+    }
+   #imago {
+    height: 220px;
+    }
+    #ratingo {
+    padding-top: 30px;
+    }
+    #descripto {
+    height: 100px;
+    }
+    #coloro .btn-primary {
+    width: 90%;
+    font-size: 12px;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+   #producto {
+	height: 500px;
+    }
+   #titleo {
+    height: 50px;
+    }
+   #imago {
+    height: 160px;
+    }
+}
+
+@media (max-width: 400px) {
+    #coloro .btn-primary {
+    width: 100%;
+    font-size: 10px;
+    padding: 5px 5px;
+    }
+    #descripto {
+    padding-right: 0;
+    padding-left: 0;
+    }
+    #ratingo {
+    padding-top: 20px;
+    }
+}
+
+@media (max-width: 340px) {
+    #ratingo {
+    padding-top: 0;
+    }
+    #admin-panel {
+        height: auto;
+    }
+    #admin-panel .btn {
+        font-size: 20px;
+    }
+}
