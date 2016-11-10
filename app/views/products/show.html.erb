@@ -13,16 +13,17 @@
           <p>Average Rating:<div class="rated" data-score="<%= @product.average_rating %>"></div> </p> 
         </div>
       <p>Color: <%= @product.color %></p>
-      <p>Price $<%= @product.price %></p>
+      <p>Price $<%= @product.price.to_f/100 %></p>
         <div class="col-md-12" id="descriptov">
           <p><a class="product-descriptionv"><%= @product.description %></a></p>
           
         </div>
         <br>
         <div class='col-md-12' id="buy-product">
-          <%= hidden_field_tag(:product_id, @product.id) %>
+          
           <%= form_tag "/payments/create" do %>
-          <%= render partial: "shared/stripe_checkout_button" %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+            <%= hidden_field_tag(:product_id, @product.id) %>
           <% end %>
 
         </div>
@@ -35,11 +36,11 @@
 
       <div class="col-md-12" id="admin-panel"> 
         <% if signed_in? && current_user.admin? %>
-          <%= link_to 'Show', product,
+          <%= link_to 'Show', @product,
               :class => "btn btn-xs btn-info" %>
-          <%= link_to 'Edit', edit_product_path(product),
+          <%= link_to 'Edit', edit_product_path(@product),
             :class => "btn btn-xs btn-warning" %> 
-          <%= link_to 'Delete', product, 
+          <%= link_to 'Delete', @product, 
             method: :delete, 
             data: { confirm: 'Are you sure?'},
             :class => "btn btn-xs btn-danger"  %>
