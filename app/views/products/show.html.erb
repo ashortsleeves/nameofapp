@@ -20,12 +20,14 @@
         </div>
         <br>
         <div class='col-md-12' id="buy-product">
-          
-          <%= form_tag "/payments/create" do %>
-            <%= render partial: "shared/stripe_checkout_button" %>
-            <%= hidden_field_tag(:product_id, @product.id) %>
+          <% if signed_in? %> 
+            <%= form_tag "/payments/create" do %>
+              <%= render partial: "shared/stripe_checkout_button" %>
+              <%= hidden_field_tag(:product_id, @product.id) %>
+            <% end %>
+          <% else %>
+            <p><%= link_to('Login to Buy', new_user_session_path, :class => "btn btn-primary btn-lg center-block") %></p>
           <% end %>
-
         </div>
         <div class="col-md-12" id="commentsov">
           <%= render :partial => '/products/comments' %>  

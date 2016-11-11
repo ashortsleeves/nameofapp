@@ -1,4 +1,5 @@
 class PaymentsController < ApplicationController
+  before_filter :authenticate_user!
     def create
       token = params[:stripeToken]
         @product = Product.find(params[:product_id])
