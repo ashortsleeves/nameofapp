@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
 
 def index
+  byebug
   if params[:q]
     search_term = params[:q]
     logger.debug "User is searching for #{search_term}"
@@ -39,7 +40,7 @@ end
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
+    logger.debug "Admin is creating a product called #{@product.name}"
     respond_to do |format|
       if @product.save
         format.html { redirect_to "/static_pages/landing_page", notice: 'Product was successfully created.' }
