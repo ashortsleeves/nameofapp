@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
 
 def index
-  byebug
+
   if params[:q]
     search_term = params[:q]
     logger.debug "User is searching for #{search_term}"
