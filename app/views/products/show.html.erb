@@ -1,6 +1,6 @@
 <div class="container" id="productshow">
   <p id="notice"><%= notice %></p>
-  
+   <% cache @product do %> 
   	<div class="row" id="productov">
     	<div class="col-md-6" id="imagov">
        <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
@@ -48,6 +48,6 @@
       </div>
       
     </div><!-- /row -->
-
+  <% end %>
 </div><!--/container-->
 
