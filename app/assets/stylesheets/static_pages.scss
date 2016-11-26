@@ -121,16 +121,40 @@ input[type=submit] {
     #nav-bs {
     width: 100%;
     }
-
+    
+    #carousel-example-generic {
+        display: none;
+    }
 
 }
 
 @media (max-width: 474px) {
     .navbar-header {
-        width: 100%;
+        // width: 100%;
         margin-left: 0px;
     }    
+    .search {
+        width: 120px;
+    }
+    .search-control {
+        width: 90px;
+    }
 
+}
+
+@media (max-width: 330px) {
+    .navbar-brand {
+        padding: 15px 0px 15px 15px;    
+    }
+}
+
+@media (max-width: 310px) {
+    .search {
+        display:none;
+    }
+    .navbar-header {
+        width: 100%;
+    }
 }
 
 @media (max-width: 296px) {
@@ -399,7 +423,9 @@ p {
 	padding-top: 100px;
 }
 
-
+#homebikes h1 {
+    padding-top: 20px;
+}
 
 /* End Body */
 
