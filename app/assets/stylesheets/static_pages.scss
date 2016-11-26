@@ -84,6 +84,10 @@ h1 {
     color: #fff;
 }
 
+#search2 {
+    display: none;
+}
+
 input[type=submit] {
     background-color: #8f8f8f;
     border-radius: 1px;
@@ -111,15 +115,16 @@ input[type=submit] {
 @media (max-width: 767px) {
     .navbar-header {
         display:inline-block;
-        // width: 60%;
+        width: 100%;
     }
-    .search {
+    #search1 {
+        display: none;
+    }
+    #search2 {
         display: block;
-        float: right;
     }
-
     #nav-bs {
-    width: 100%;
+        width: 100%;
     }
     
     #carousel-example-generic {
@@ -151,9 +156,6 @@ input[type=submit] {
 @media (max-width: 310px) {
     .search {
         display:none;
-    }
-    .navbar-header {
-        width: 100%;
     }
 }
 
