@@ -17,10 +17,11 @@
       </div>
   
       
-      
+  <% end %>    
       <div class="col-md-12" id="coloro">
   <p><%= link_to 'Buy Now', product, :class => "btn btn-primary btn-lg" %></p>
       </div>
+
       <div class="col-md-12" id="admin-panel"> 
         <% if signed_in? && current_user.admin? %>
           <%= link_to 'Show', product,
@@ -35,5 +36,5 @@
       </div>
       
     </div><!-- /row -->
-  <% end %>
+
 </div><!-- /col -->
