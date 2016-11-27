@@ -1,7 +1,7 @@
 <div class="container" id="productshow">
   <p id="notice"><%= notice %></p>
-   <% cache @product do %> 
   	<div class="row" id="productov">
+  	<% cache @product do %> 
     	<div class="col-md-6 col-sm-6" id="imagov">
        <%= image_tag(@product.image_url, class: "img-responsive img-zoom", id: "imagoshow", data_zoom_image: @product.image_url) %>
     	</div>
@@ -14,7 +14,7 @@
       <p>Price $<%= @product.price.to_f/100 %></p>
         <div class="col-md-12" id="descriptov">
           <p><a class="product-descriptionv"><%= @product.description %></a></p>
-          
+    <% end %>
         </div>
         <br>
         <div class='col-md-12' id="buy-product">
@@ -50,6 +50,6 @@
       </div>
       
     </div><!-- /row -->
-  <% end %>
+
 </div><!--/container-->
 
