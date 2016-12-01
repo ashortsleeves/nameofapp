@@ -27,7 +27,9 @@
         <div class="container">
 
           <div class="carousel-image">
+          <%= link_to product do %>
             <%= image_tag(product.image_url,  width: "300", alt: "Bike Image", class: "img-responsive") %>
+          <% end %>
           </div>
           <div id="carousel-caption-mobile-button">
             <p><%= link_to 'Buy Now', product, :class => "btn btn-primary btn-lg center-block" %></p>
