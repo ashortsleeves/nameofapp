@@ -1,5 +1,6 @@
 <div class="container" id="productshow">
   <p id="notice"><%= notice %></p>
+  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
   	<div class="row productov" id="productov" data-product-id="<%= @product.id %>">
   	<% cache @product do %> 
     	<div class="col-md-6 col-sm-6" id="imagov">
@@ -27,7 +28,7 @@
             <p><%= link_to('Login to Buy', new_user_session_path, :class => "btn btn-primary btn-lg center-block") %></p>
           <% end %>
         </div>
-        <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+        
         <div class="col-md-12" id="commentsov">
           <%= render :partial => '/products/comments' %>  
           <%= render :partial => '/products/new_comment' %>
