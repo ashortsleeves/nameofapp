@@ -6,9 +6,11 @@
     <h3><%= link_to product.name, product %></h3>
     	</div>
     	<div class="col-md-12" id="imago">
-      <a href="#" class="thumbnail">
-       <%= image_tag(product.image_url, width: "250", alt: "Bike Image", class: "img-responsive") %>
-       </a>
+
+        <%= link_to product do %>
+          <%= image_tag(product.image_url, width: "250", alt: "Bike Image", class: "img-responsive") %>
+        <% end %>
+
     	</div>
         <div class="col-md-12" id="ratingo">
          <div class="rated" data-score="<%= product.average_rating %>"></div> 
