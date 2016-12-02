@@ -64,3 +64,4 @@ gem "brakeman", :require => false
 gem 'dalli'
 gem 'redis-rails'
 gem 'newrelic_rpm'
+gem 'ckeditor'

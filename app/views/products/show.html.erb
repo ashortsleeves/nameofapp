@@ -40,8 +40,8 @@
           <div class="tab-content">
 
 
-            <div role="tabpanel" class="tab-pane active" id="overview"><%= @product.description %></div>
-            <div role="tabpanel" class="tab-pane" id="specs"><%= @product.specs %></div>
+            <div role="tabpanel" class="tab-pane active" id="overview"><%= raw @product.description %></div>
+            <div role="tabpanel" class="tab-pane" id="specs"><%= raw @product.specs %></div>
 
           
             <div role="tabpanel" class="tab-pane" id="reviews">
@@ -52,26 +52,26 @@
             </div>
           </div>
 
+        <div class="col-md-12" id="admin-panel"> 
 
+          <% if signed_in? && current_user.admin? %>
+            <%= link_to 'Show', @product,
+                :class => "btn btn-xs btn-info" %>
+            <%= link_to 'Edit', edit_product_path(@product),
+              :class => "btn btn-xs btn-warning" %> 
+            <%= link_to 'Delete', @product, 
+              method: :delete, 
+              data: { confirm: 'Are you sure?'},
+              :class => "btn btn-xs btn-danger"  %>
+          <% end %>
+
+        </div>
 
     	</div>
   
   
 
-      <div class="col-md-12" id="admin-panel"> 
 
-        <% if signed_in? && current_user.admin? %>
-          <%= link_to 'Show', @product,
-              :class => "btn btn-xs btn-info" %>
-          <%= link_to 'Edit', edit_product_path(@product),
-            :class => "btn btn-xs btn-warning" %> 
-          <%= link_to 'Delete', @product, 
-            method: :delete, 
-            data: { confirm: 'Are you sure?'},
-            :class => "btn btn-xs btn-danger"  %>
-        <% end %>
-
-      </div>
       
     </div><!-- /row -->
 
