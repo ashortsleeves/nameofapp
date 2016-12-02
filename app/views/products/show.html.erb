@@ -8,9 +8,8 @@
     	</div>
     	<div class="col-md-6 col-sm-6">
     	 <h3><%= @product.name %></h3>
-    	 <!-- <div class="col-md-12" id="ratingov"> -->
           <p>Average Rating:<div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div></p> 
-<!--         </div> -->
+
       <p>Color: <%= @product.color %></p>
       <p>Price $<%= @product.price.to_f/100 %></p>
     <% end %>
@@ -40,10 +39,10 @@
           <!-- Tab panes -->
           <div class="tab-content">
 
-          <% cache @product do %>
+
             <div role="tabpanel" class="tab-pane active" id="overview"><%= @product.description %></div>
             <div role="tabpanel" class="tab-pane" id="specs"><%= @product.specs %></div>
-          <% end %>
+
           
             <div role="tabpanel" class="tab-pane" id="reviews">
 
