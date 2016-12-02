@@ -9,8 +9,19 @@ h1 {
   font-family: 'Montserrat', sans-serif;
 }
 
+.logo1 {
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
 
-
+.logo2 {
+    display: block;
+    height: 100%;
+}
 
 /* Custom Bootstrap Navbar */
 
@@ -56,6 +67,7 @@ h1 {
 .navbar-default .navbar-brand {
     color: #777;
     font-family: 'Montserrat', sans-serif;
+    padding: 5px 15px;
 }
 
 
@@ -147,24 +159,12 @@ input[type=submit] {
 
 }
 
-@media (max-width: 330px) {
-    .navbar-brand {
-        padding: 15px 0px 15px 15px;    
-    }
-}
-
 @media (max-width: 310px) {
     .search {
         display:none;
     }
 }
 
-@media (max-width: 296px) {
-    .navbar-brand {
-    padding: 15px 10px;
-    font-size: 15px;
-    }
-}
 /* End Custom Bootstrap Navbar */
 
 /* Landing-Page Container */
