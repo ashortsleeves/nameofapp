@@ -23,13 +23,13 @@ h1 {
     height: 100%;
 }
 
+
 /* Custom Bootstrap Navbar */
 
 #custom-bootstrap-menu.navbar-default .navbar-brand {
     color: rgba(255, 255, 255, 1);
 }
 #custom-bootstrap-menu.navbar-default {
-    font-size: #ffffffpx;
     background-color: #292929;
     border-bottom-width: 0px;
 }
@@ -70,7 +70,11 @@ h1 {
     padding: 5px 15px;
 }
 
-
+#custom-bootstrap-menu.navbar-default .navbar-brand:hover, 
+#custom-bootstrap-menu.navbar-default .navbar-brand:focus {
+  background-color: transparent;
+  color: #999999;
+}
 .navbar-header button {
     border-color: #fff;
 }
@@ -470,4 +474,9 @@ footer {
     }
 
 }
+
 /* End Footer */
+#brandlogo:hover,
+#brandlogo:focus {
+    background-color: rgba(0, 0, 0, 0) !important; 
+}
