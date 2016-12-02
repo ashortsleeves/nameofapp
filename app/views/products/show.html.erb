@@ -1,23 +1,23 @@
 <div class="container" id="productshow">
   <p id="notice"><%= notice %></p>
   	<div class="row productov" id="productov" data-product-id="<%= @product.id %>">
+
   	<% cache @product do %> 
     	<div class="col-md-6 col-sm-6" id="imagov">
        <%= image_tag(@product.image_url, class: "img-responsive img-zoom", id: "imagoshow", data_zoom_image: @product.image_url) %>
     	</div>
     	<div class="col-md-6 col-sm-6">
     	 <h3><%= @product.name %></h3>
-    	 <div class="col-md-12" id="ratingov">
-          <p>Average Rating:<div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p> 
-        </div>
+    	 <!-- <div class="col-md-12" id="ratingov"> -->
+          <p>Average Rating:<div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div></p> 
+<!--         </div> -->
       <p>Color: <%= @product.color %></p>
       <p>Price $<%= @product.price.to_f/100 %></p>
-        <div class="col-md-12" id="descriptov">
-          <p><a class="product-descriptionv"><%= @product.description %></a></p>
     <% end %>
-        </div>
+
         <br>
         <div class='col-md-12' id="buy-product">
+
           <% if signed_in? %> 
             <%= form_tag "/payments/create" do %>
               <%= render partial: "shared/stripe_checkout_button" %>
@@ -26,17 +26,41 @@
           <% else %>
             <p><%= link_to('Login to Buy', new_user_session_path, :class => "btn btn-primary btn-lg center-block") %></p>
           <% end %>
+
         </div>
         <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-        <div class="col-md-12" id="commentsov">
-          <%= render :partial => '/products/comments' %>  
-          <%= render :partial => '/products/new_comment' %>
-        </div>
+
+        
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
+            <li role="presentation" ><a href="#specs" aria-controls="specs" role="tab" data-toggle="tab">Specs</a></li>
+            <li role="presentation" ><a href="#reviews" aria-controls="ingredients" role="tab" data-toggle="tab">Reviews</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+
+          <% cache @product do %>
+            <div role="tabpanel" class="tab-pane active" id="overview"><%= @product.description %></div>
+            <div role="tabpanel" class="tab-pane" id="specs"><%= @product.specs %></div>
+          <% end %>
+          
+            <div role="tabpanel" class="tab-pane" id="reviews">
+
+              <%= render :partial => '/products/comments' %>  
+              <%= render :partial => '/products/new_comment' %>
+
+            </div>
+          </div>
+
+
+
     	</div>
   
   
 
       <div class="col-md-12" id="admin-panel"> 
+
         <% if signed_in? && current_user.admin? %>
           <%= link_to 'Show', @product,
               :class => "btn btn-xs btn-info" %>
@@ -47,6 +71,7 @@
             data: { confirm: 'Are you sure?'},
             :class => "btn btn-xs btn-danger"  %>
         <% end %>
+
       </div>
       
     </div><!-- /row -->

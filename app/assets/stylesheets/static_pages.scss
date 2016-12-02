@@ -461,7 +461,13 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #f5f5f5;
+    margin-top: 10%;
 }
 
+@media (min-width: 768px) {
+    footer {
+        margin-top: 30%;        
+    }
 
+}
 /* End Footer */
