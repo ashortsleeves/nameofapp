@@ -86,6 +86,7 @@
               <%= link_to('Login', new_user_session_path) %>
             <% end %>
           </li>
+          <li class="cart-text"><%= render 'layouts/cart_text' %></li>
           <% if signed_in? && current_user.admin? %>
             <li><%= link_to "Admin", users_path %></li>
           <% end %>

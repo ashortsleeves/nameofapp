@@ -18,6 +18,7 @@ def index
   else
     @products = Product.all
   end
+  @order_item = current_order.order_items.new
 end
 
   # GET /products/1
