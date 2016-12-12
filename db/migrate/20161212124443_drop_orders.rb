@@ -1,0 +1,15 @@
+class DropOrders < ActiveRecord::Migration[5.0]
+  def up
+    drop_table :orders
+  end
+
+  def down
+    create_table :orders do |t|
+      t.integer :user_id
+      t.integer :product_id
+      t.float :total
+    end
+      add_index :orders, :user_id
+      add_index :orders, :product_id
+  end
+end
